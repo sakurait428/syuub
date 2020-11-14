@@ -1,0 +1,353 @@
+@charset "UTF-8";
+
+/* 共通部分
+-----------------*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 100%;
+}
+body {
+    font-family: "M PLUS Rounded 1c", "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", sans-serif;
+    line-height: 1.7;
+    color: #432;
+}
+a {
+    text-decoration: none;
+}
+img {
+    max-width: 100%;
+}
+.wrapper {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 0;
+}
+ul {
+    list-style: none;
+}
+
+/* ハンバーガーメニュー
+-----------------*/
+aside {
+    width: 20%;
+    min-width: 250px;
+    display: flex;
+    flex-direction: column;
+}
+.hbmenu {
+    display: none;
+}
+.open,
+.close {
+    display: none;
+}
+input[type="checkbox"]{
+    position: absolute;
+    left: -50vw;
+}
+
+/* HEADER
+-----------------*/
+header {
+    max-width: 980px;
+    display: flex;
+    justify-content:space-between;
+}
+
+.nav-container {
+    margin: 0 auto;
+    max-width: 980px;
+}
+
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.25rem;
+    margin-top: 20px;    
+    list-style: none;
+}
+
+.main-nav li {
+    width: 15%;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+}
+
+.main-nav a {
+    color: #432;
+    display: block;
+    border-bottom: 1px solid #696969;
+}
+
+.main-nav a:hover {
+    color: #808080;
+    border-bottom: 1px solid #dcdcdc;
+}
+.tel {
+    margin-top: 20px;
+}
+
+/* MAIN-VISUAL
+-----------------*/
+
+.main-visual {
+    border: 1px solid #696969;
+    margin-top: 20px;
+}
+
+/* ホーム
+-----------------*/
+.home-content {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #F3FAF0;
+    padding: 30px 0 30px 0;
+}
+.home-content-text {
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+}
+.home-content img {
+    border: 1px solid black;
+    min-width: 160px;
+    min-height: 160px;
+}
+.home-content h3 {
+    padding: 0 0 0 30px;        
+}
+.home-content p {
+    line-height: 30px;
+    padding: 0 0 0 30px;
+}
+main {
+    display: flex;
+    justify-content: center;
+}
+.main-left {
+    border: 7px solid #EBB8B8;
+    margin: 20px 0 20px 0;
+    padding:15px;
+    border-radius: 35px;
+    width: 55%;
+}
+.main-left h2 {
+    text-align: center;
+}
+.main-left h3 {
+    margin: 10px 0 0 5px;
+}
+.check02 {
+    width: 30px;
+}
+.main-right {
+    margin: 20px 0 20px 0;
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+    align-items: center; 
+}
+.main-right img {
+    max-width: 250px;
+    max-height: 150px;
+    padding:10px 0 10px 0;
+}
+/*見学のご案内*/
+.guide {
+    font-size:120%;
+    line-height: 200%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding:20px 0 20px 0;
+    border-top: 1px solid #B1B1B1;
+    border-bottom: 1px solid #B1B1B1;
+}
+.guide2 {
+    font-size:120%;
+    line-height: 200%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding:20px 0 20px 0;
+}
+.guide2 .newline {
+    display: none;
+}
+/* フッター
+-----------------*/
+.foot-image {
+    margin-top: 20px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+.foot-image img {
+
+}
+.foot {
+    background: #95C000;
+    display: flex;
+    justify-content: center;
+}
+.foot-wrapper {
+    width: 980px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 90%;
+}
+.foot ul {
+    padding: 20px 40px 20px 30px;
+}
+footer a {
+    color: #ffffff;
+}
+footer a:hover {
+    color: #808080;
+}
+.copy {
+    background: #759600;
+    color: #ffffff;
+    text-align: center;
+    font-size: 70%;
+    padding: 10px;
+}
+
+
+
+
+/* モバイル版
+------------------------------- */
+@media (max-width: 600px) {
+    .wrapper {
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 0 1%;
+    }
+/* ハンバーガーメニュー
+-----------------*/
+    .nav-container {
+        display: none;
+    }
+    .tel {
+        display: none;
+    }
+    .open,
+    .close {
+        display: block;
+    }
+    .open {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+    aside {
+        position: fixed;
+        right: -250px;
+        height: 100%;
+        transition: all 0.2s;
+        background: #ffffff;
+    }
+    .close {
+        font-size: 2rem;
+    }
+    .hbmenu {
+        display: block;
+    }
+    .hbmenu a {
+        margin-top: 5px;
+        color: #432;
+        display: block;
+        font-size: 1.25rem;
+        font-family: "M PLUS Rounded 1c";
+        height: 80px;
+        line-height: 80px;
+        padding-left: 10px;
+        background: #dcdcdc;
+        border-bottom: 1px solid #696969;
+    }    
+    .hbmenu a:hover {
+        color: #808080;
+        border-bottom: 1px solid #dcdcdc;
+    }
+    input[type="checkbox"]:checked ~ aside {
+        right: 0;
+    }
+    input[type="checkbox"]:checked ~ .back {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.8);
+    }
+    .logo {
+        height: 80px;
+    }
+    .main-visual {
+        margin: 0 auto;
+    }
+
+    /* ホーム
+-----------------*/
+    .home-content {
+        padding: 5px;
+        flex-direction: column;
+        align-items: center;
+    }
+    .home-content img {
+        display: block;
+    }
+    .home-content h3 {
+        padding: 10px 0 0 0;        
+    }
+    .home-content p {
+        display: block;
+        width: 100%;
+        line-height: 30px;
+        padding: 5px 0 0 0;
+    }
+    main {
+        display: block;
+    }
+    .main-left {
+        border: 7px solid #EBB8B8;
+        margin-top: 10px;
+        padding:10px;
+        width: 100%;
+    }
+    .main-right {
+        border: 1px solid black;
+        margin-top: 10px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content:space-around;
+    }
+    .main-right img {
+        width: 32%;
+        height: 100%;
+        padding:10px 5px 10px 5px;
+    }
+    .guide2 .newline {
+        display: inline;
+    }
+
+    /* フッター
+-----------------*/
+    .foot {
+        display: flex;
+        justify-content: space-between;
+        font-size: 90%;
+    }
+    .foot ul {
+        padding: 5px;
+} 
+}
